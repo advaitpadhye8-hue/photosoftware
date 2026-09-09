@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Upload Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Mobile gallery</p>
+          <h1>Photo Upload Studio</h1>
+        </div>
+      </header>
+
+      <main class="container">
+        <section class="upload-panel">
+          <div class="upload-box">
+            <div class="upload-icon">📸</div>
+            <h2>Upload your pictures</h2>
+            <p>Choose photos from your gallery or camera and download them anytime.</p>
+            <label for="imageInput" class="upload-button">Select Images</label>
+            <input id="imageInput" type="file" accept="image/*" multiple capture="environment" />
+          </div>
+        </section>
+
+        <section class="gallery-panel">
+          <div class="panel-header">
+            <h3>My Photos</h3>
+            <span id="photoCount" class="count-badge">0 images</span>
+          </div>
+          <div id="gallery" class="gallery" aria-live="polite"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
